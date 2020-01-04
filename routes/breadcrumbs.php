@@ -51,6 +51,11 @@ Breadcrumbs::for('admin.book.edit', function ($trail, $book) {
     $trail->push('Tambah Buku', route('admin.book.edit',$book));
 });
 
+//Borrow index
+Breadcrumbs::for('admin.borrow.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('Peminjaman', route('admin.borrow.index'));
+});
 
 
 ?>  
