@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Author;
 use App\Book;
 use App\BorrowHistory;
+use App\User;
 
 class DataController extends Controller
 {
@@ -53,6 +54,24 @@ class DataController extends Controller
                 ->addIndexColumn()
                 ->rawColumns(['action'])
                 ->toJson(); 
+    }
+
+    public function users()
+     {
+
+        $users=User::orderBy('id', 'ASC');
+
+        return datatables()->of($users)
+                // ->addColumn('user', function(user $model){
+                //    return $model->user->id;
+                // })
+                // ->editColumn('cover', function (book $model){
+                //     return '<img src="'. $model->getCover() .'" height="150px" >';
+                // })
+                // ->addColumn('action', 'admin.book.action')
+                ->addIndexColumn()
+                // ->rawColumns(['cover','action'])
+                ->toJson();
     }
 }
 

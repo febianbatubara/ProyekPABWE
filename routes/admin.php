@@ -17,11 +17,17 @@ Route::get('/', 'HomeController@index')->name('dashboard');
 Route::get('/author/data', 'DataController@authors')->name('author.data');
 
 Route::get('/book/data', 'DataController@books')->name('book.data');
+
 Route::get('/borrow/data', 'DataController@borrows')->name('borrow.data');
+
+Route::get('/user/data', 'DataController@users')->name('user.data');
 
 
 Route::resource('author','AuthorController');
+
 Route::resource('book','BookController');
+
+Route::resource('user','UserController');
 
 Route::get('borrow', 'BorrowController@index')->name('borrow.index');
 

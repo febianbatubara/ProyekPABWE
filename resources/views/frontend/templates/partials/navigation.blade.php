@@ -1,6 +1,6 @@
 <div class="navbar-fixed">
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper teal lighten-2">
             <a href="{{ route('homepage') }}" class="brand-logo" style="padding-left: 10px">SISTEM PERPUSTAKAAN SMA<img src="{{ asset('assets/dist/img/Logo2.png') }}" alt="Logo" height="62px" style="float: right"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">

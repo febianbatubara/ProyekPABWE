@@ -57,5 +57,11 @@ Breadcrumbs::for('admin.borrow.index', function ($trail) {
     $trail->push('Peminjaman', route('admin.borrow.index'));
 });
 
+//User index
+Breadcrumbs::for('admin.user.index', function ($trail) {
+    $trail->push('Beranda', route('admin.dashboard'));
+    $trail->push('User', route('admin.user.index'));
+});
+
 
 ?>  
